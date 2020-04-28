@@ -21,7 +21,6 @@ class TransactionsRepository {
 
   public all(): Transaction[] {
     return this.transactions;
-    // DONE
   }
 
   public getBalance(): Balance {
@@ -38,14 +37,12 @@ class TransactionsRepository {
     const total = income - outcome;
     const balance = { income, outcome, total };
     return balance;
-    // DONE
   }
 
   public create({ title, type, value }: CreateTransactionDTO): Transaction {
     const transaction = new Transaction({ title, type, value });
     this.transactions.push(transaction);
     return transaction;
-    // DONE
   }
 }
 
